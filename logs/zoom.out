@@ -1,0 +1,6 @@
+▶️ Target 8 → /usr/local/nginx/html/stream/final8.m3u8
+▶️ Target 9 → /usr/local/nginx/html/stream/final9.m3u8
+▶️ Target 11 → /usr/local/nginx/html/stream/final11.m3u8
+▶️ Target 19 → /usr/local/nginx/html/stream/final19.m3u8
+YOLOv8s summary (fused): 72 layers, 11,156,544 parameters, 0 gradients, 28.6 GFLOPs
+YOLOv8s summary (fused): 72 layers, 11,156,544 parameters, 0 gradients, 28.6 GFLOPs
