@@ -1,20 +1,45 @@
-# object-tracking-yolov8-deep-sort
+# AI Player Tracking and Streaming System
 
-Yolov8 object detection + deep sort object tracking !
+This project implements a real-time player tracking and streaming system using YOLOv8, tracking, and OCR.
 
-[![Watch the video](https://img.youtube.com/vi/jIRRuGN0j5E/0.jpg)](https://www.youtube.com/watch?v=jIRRuGN0j5E)
+It detects players from multiple video sources, tracks them across frames, recognizes jersey numbers, and generates a zoomed stream focused on selected players.
 
-## requirements
+---
 
-- Python 3.7
-- requirements.txt
+## Overview
 
-## Deep Sort
+The system processes video input from multiple cameras and applies object detection, tracking, and OCR to identify players.  
+Based on the selected player number, the system automatically crops and streams a focused view using HLS.
 
-We are working on [this fork](https://github.com/computervisiondeveloper/deep_sort) from deep sort official implementation.
+---
 
-You can download deep sort feature extraction model [here](https://drive.google.com/open?id=18fKzfqnqhqW3s9zwsCbnVJ5XF2JFeqMp).
+## Pipeline
 
-## data
+Video Input (Multi Camera)  
+→ YOLOv8 Detection (Player Bounding Box)  
+→ Tracking (ID Assignment)  
+→ OCR (Jersey Number Recognition)  
+→ Target Player Selection  
+→ Zoom and Cropping  
+→ HLS Streaming (FFmpeg)
 
-You can download the same data I use in the video [here](https://drive.google.com/drive/folders/1kZ0QVwlwMERyTyi5c72GeqKgr8qAUx2o?usp=sharing).
+---
+
+## Tech Stack
+
+- Python
+- OpenCV
+- PyTorch
+- YOLOv8 (Ultralytics)
+- EasyOCR
+- Tracking Algorithm (ByteTrack / DeepSort-based)
+- FFmpeg
+
+---
+
+## Requirements
+
+- Python 3.8 or higher
+- CUDA (optional, for GPU acceleration)
+
+Install dependencies:
